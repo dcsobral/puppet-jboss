@@ -1,5 +1,5 @@
 class jboss::conf::default {
-    jboss::conf {
+    jboss::conf { 'jboss':
         ensure => present,
         source => [
 		    "puppet:///files/jboss/default/host/jboss.$fqdn",
