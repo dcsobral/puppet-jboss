@@ -1,0 +1,24 @@
+# users puppet module #
+
+Manages user configuration.
+
+Supported corrective actions under: Debian.
+
+## Classes ##
+
+* jboss
+* jboss::conf::default
+
+### jboss ###
+
+Jboss service, a jboss init.d script, and requires java. It does not
+handle package management.
+
+## Definitions ##
+
+* jboss::conf
+
+### jboss::count ###
+
+Handles /etc/default/jboss, used by the init.d script.
+

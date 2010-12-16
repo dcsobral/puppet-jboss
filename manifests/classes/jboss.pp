@@ -8,13 +8,13 @@ class jboss {
         owner  => 'root',
         group  => 'root',
         source => [
-		"puppet:///files/jboss/init.d/host/jboss.$fqdn",
-		"puppet:///files/jboss/init.d/host/jboss.$hostname",
-		"puppet:///files/jboss/init.d/domain/jboss.$domain",
-		"puppet:///files/jboss/init.d/enc/jboss.$environment",
-		"puppet:///files/jboss/init.d/jboss",
-		"puppet:///modules/jboss/init.d/jboss",
-	],
+		    "puppet:///files/jboss/init.d/host/jboss.$fqdn",
+		    "puppet:///files/jboss/init.d/host/jboss.$hostname",
+		    "puppet:///files/jboss/init.d/domain/jboss.$domain",
+		    "puppet:///files/jboss/init.d/enc/jboss.$environment",
+		    "puppet:///files/jboss/init.d/jboss",
+		    "puppet:///modules/jboss/init.d/jboss",
+	    ],
     }
 
     file { '/var/lock/subsys':
@@ -30,9 +30,9 @@ class jboss {
         hasrestart => true,
         hasstatus  => true,
         require    => [
-		File['/etc/init.d/jboss'],
-		File['/var/lock/subsys'],
-	],
+		    File['/etc/init.d/jboss'],
+		    File['/var/lock/subsys'],
+	    ],
     }
 }
 
