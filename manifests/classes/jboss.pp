@@ -33,6 +33,7 @@ class jboss {
 		    File['/etc/init.d/jboss'],
 		    File['/var/lock/subsys'],
 	    ],
+        subscribe  => File['/etc/init.d/jboss'],
     }
 }
 
