@@ -1,6 +1,6 @@
 class jboss {
     Exec { path => '/usr/bin:/usr/sbin/:/bin:/sbin:/usr/local/bin:/usr/local/sbin' }
-    include java::v6
+    include java
 
     file { '/etc/init.d/jboss':
         ensure => present,
