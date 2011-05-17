@@ -68,7 +68,7 @@ start ()
         while [ $sleep -lt 180 -a $RETVAL -eq 1 ]; do
             sleep 10
             sleep=`expr $sleep + 10`
-            grep -q MicroKernel $JBOSS_HOME/server/$JBOSS_CONFIGURATION/log/server.log > /dev/null 2>&1
+            grep -q "Started in" $JBOSS_HOME/server/$JBOSS_CONFIGURATION/log/server.log > /dev/null 2>&1
             if [ $? -eq 0 ]; then
                 RETVAL=0
             fi
